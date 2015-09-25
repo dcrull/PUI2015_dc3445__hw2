@@ -3,12 +3,13 @@ import json
 import csv
 import urllib2
 
+# format note...I know I still need to work on code line length!
+
 if __name__=="__main__":
 	#pull url and concatenate with key and bus line
 	mta_url = ("http://api.prod.obanyc.com/api/siri/"
 				"vehicle-monitoring.json?key=%s"
-				"&VehicleMonitoringDetailLevel=calls&LineRef=%s") % (sys.argv[1],
-																	 sys.argv[2])
+				"&VehicleMonitoringDetailLevel=calls&LineRef=%s") % (sys.argv[1],sys.argv[2])
 
 	#open url and save in a variable
 	get_mta = urllib2.urlopen(mta_url)	
